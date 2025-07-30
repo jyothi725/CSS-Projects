@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow: hidden;
+}
+.sky{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to top,#001d3d, #003566);
+    position: relative;
+    animation: changeSky 10s linear infinite alternate;
+}
+.sun{
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #ffb703, #fb8500);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: RiseSun 10s linear infinite alternate;
+}
+@keyframes RiseSun{
+    0%{
+        bottom: -100px;
+    }
+    50%{
+        bottom: 50%;
+    }
+    100%{
+        bottom: 100%;
+    }
+}
+@keyframes changeSky{
+    0%{
+        background: linear-gradient(to top,#001d3d, #003566);
+    }
+    25%{
+        background: linear-gradient(to top,#003566, #0096c7);
+    }
+    50%{
+        background: linear-gradient(to top,#0096c7, #00b4d8);
+    }
+    75%{
+        background: linear-gradient(to top,#00b4d8, #90e0ef);
+    }
+    100%{
+        background: linear-gradient(to top,#90e0ef, #caf0f8);
+    }
+}
